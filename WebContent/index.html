@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Restaurants</title>
+    <meta name="description" content="Restaurant Recommendation" />
+    <meta name="author" content="Hongyu Hu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <header class="top-header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <nav class="top-nav">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a id="sign-up-btn-top" class="top-header-btn" href="#">Sign up</a>
+        <a id="sign-in-btn-top" class="top-header-btn" href="index.html"
+          >Sign in</a
+        >
+      </nav>
+      <span id="welcome-msg">Welcome, Hongyu Hu</span>
+      <a id="logout-link" class="top-header-btn" href="LogoutServlet">Logout</a>
+      <i id="avatar" class="avatar fa fa-user fa-2x"></i>
+    </header>
+
+    <div class="container">
+      <header id="background-img"></header>
+
+      <section class="main-section">
+        <div id="login-form">
+          <label for="username">User ID</label>
+          <input id="username" name="username" type="text" />
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" />
+          <div id="signup-form">
+            <label for="first-name">First Name</label>
+            <input id="first-name" name="first-name" type="text" />
+            <label for="last-name">Last Name</label>
+            <input id="last-name" name="last-name" type="text" />
+          </div>
+          <button id="login-btn">
+            <i class="fa fa-unlock-alt"></i>
+            <span>&nbsp;Log In</span>
+          </button>
+          <button id="signup-btn">
+            <i class="fa fa-lock"></i>
+            <span>&nbsp;Sign Up</span>
+          </button>
+          <p id="login-error"></p>
+        </div>
+        <aside id="restaurant-nav">
+          <div class="nav-icon">
+            <i class="fa fa-cutlery fa-2x"></i>
+          </div>
+          <nav class="main-nav">
+            <a href="#" id="nearby-btn" class="main-nav-btn active">
+              <i class="fa fa-location-arrow"></i> Nearby
+            </a>
+            <a href="#" id="fav-btn" class="main-nav-btn">
+              <i class="fa fa-heart"></i> My Favorites
+            </a>
+            <a href="#" id="recommend-btn" class="main-nav-btn">
+              <i class="fa fa-thumbs-up"></i> Recommendation
+            </a>
+          </nav>
+        </aside>
+        <ul id="restaurant-list">
+          <li id="restaurantbusinessid" class="restaurant">
+            <img src="" alt="image error" />
+            <div>
+              <a class="restaurant-name" href="#" target="_blank"
+                >Panda Express</a
+              >
+              <p class="restaurant-category">Category: Chinese</p>
+              <div class="stars">
+                <span>Rating (1 to 5):&nbsp;</span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+              <div class="price">
+                <span>Price Level (1 to 4): $$</span>
+              </div>
+            </div>
+            <p class="restaurant-address">
+              123 Main Ave <br />Seattle <br />WA <br />(Distance: 0.1 mi)
+            </p>
+            <div class="fav-link">
+              <i id="fav-icon-businessid" class="fa fa-heart"></i>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
+        </li>
+      </ul>
+      <div class="about">
+        <p>
+          RESTAURANTS.com is a dynamic web application for restaurant search and
+          recommendation based on users' preferences (content-based
+          recommendation algorithm).
+        </p>
+        <p>
+          Back-End: Java servlets with RESTful APIs to handle HTTP requests and
+          responses; relational and NoSQL databases (MySQL, MongoDB) to capture
+          real restaurant data from Yelp API
+        </p>
+        <p>
+          Front-End: Interactive web page utilizing AJAX technology (with HTML,
+          CSS and JavaScript)
+        </p>
+      </div>
+      <p class="copyright">
+        <span
+          >&copy; 2019 Restaurant Search & Recommendation. Designed and
+          maintained by</span
+        >
+        <a href="#"> @Hongyu Hu</a>
+      </p>
+      <div class="terms">
+        <p>All Rights Reserved</p>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script src="https://rawgit.com/emn178/js-md5/master/build/md5.min.js"></script>
+    <script src="scripts/main.js" async defer></script>
+  </body>
+</html>

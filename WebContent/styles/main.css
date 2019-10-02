@@ -1,0 +1,566 @@
+* {
+  /* The width and height properties (and min/max properties) includes content, padding and border */
+  box-sizing: border-box;
+  /* space around elements, outside of any defined borders */
+  margin: 0;
+  /* space around an element's content, inside of any defined borders */
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* The font-family property specifies the font for an element */
+  font-family: "Open Sans", sans-serif;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 300;
+  /* em:	Relative to the font-size of the element (2em means 2 times the size of the current font)	*/
+  font-size: 0.9em;
+}
+
+ul {
+  /* The list-style-type specifies the type of list-item marker in a list */
+  list-style: none;
+}
+
+/**
+* top header
+*/
+.top-header {
+  background: #ffffff;
+  /* The box-shadow property (h-offset v-offset blur spread color) attaches one or more shadows to an element */
+  box-shadow: 0px 2px 20px #333333;
+  /* The height property sets the height of an element */
+  height: 60px;
+  /* %:	Defines the width in percent of the containing block */
+  width: 100%;
+  /* The flex container becomes flexible by setting the display property to flex */
+  /* The direct child elements of a flex container automatically becomes flexible (flex) items */
+  display: flex;
+  /* Aligns the flex items vertically */
+  align-items: center;
+  /* Positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled */
+  /* The top, right, bottom, and left properties are used to position the element. */
+  position: fixed;
+  /* If position: fixed; - the top property sets the top edge of an element to a unit above/below the top edge of its nearest positioned ancestor */
+  top: 0;
+  /* The z-index property specifies the stack order of an element */
+  /* An element with greater stack order is always in front of an element with a lower stack order */
+  /* z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) */
+  z-index: 1;
+}
+
+/**
+* top navigation (Contact + About + Sign up + Sign in)
+*/
+.top-nav {
+  /* specifies how much the item will grow relative to the rest of the flexible items inside the same container */
+  /* default is 0, not growable, so other flex items in the same container are with minimum size */
+  flex: 1;
+  /* The flex container becomes flexible by setting the display property to flex */
+  /* The direct child elements of a flex container automatically becomes flexible (flex) items */
+  display: flex;
+  /* Aligns the flex items vertically */
+  align-items: center;
+  /* The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally) */
+  /* flex-end:	Items are positioned at the end of the container */
+  justify-content: flex-end;
+  /* set values the thickness of the padding area */
+  padding-right: 5%;
+}
+
+.top-nav a {
+  /* space around elements, outside of any defined borders */
+  margin-left: 20px;
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 550;
+  /* specifies the decoration added to text, this removes the underlines */
+  text-decoration: none;
+}
+
+.top-header-btn {
+  background: #ffffff;
+  /* set values the thickness of the padding area (top, right, bottom, and left) */
+  /* If left is omitted, it is the same as right. If bottom is omitted it is the same as top */
+  padding: 6px 8px;
+  /* Set the style of the right border: width, style, color */
+  border: 1px solid #55ee88;
+  /* add rounded corners to elements */
+  border-radius: 15px;
+}
+
+.top-header-btn:hover {
+  background: #1e90ff;
+}
+
+#sign-in-btn-top {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+}
+
+#sign-up-btn-top {
+  background: #55ee88;
+}
+
+#sign-up-btn-top:hover {
+  background: #1e90ff;
+}
+
+#welcome-msg {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+  /* set values the thickness of the padding area */
+  padding-right: 10px;
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 550;
+}
+
+#logout-link {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+  /* set values the thickness of the padding area (top, right, bottom, and left) */
+  /* If left is omitted, it is the same as right. If bottom is omitted it is the same as top */
+  padding: 6px 8px;
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 550;
+  /* specifies the decoration added to text, this removes the underlines */
+  text-decoration: none;
+}
+
+#avatar {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+}
+
+.avatar {
+  background: #1e90ff;
+  /* The height property sets the height of an element */
+  height: 40px;
+  /* The width property sets the width of an element */
+  width: 40px;
+  /* space around elements, outside of any defined borders */
+  margin-left: 20px;
+  margin-right: 20px;
+  /* space around an element's content, inside of any defined borders */
+  padding-left: 9px;
+  padding-top: 5px;
+  /* add rounded corners to elements */
+  border-radius: 50%;
+  /* Color of an element's text */
+  color: #ffffff;
+}
+
+/**
+* main container
+*/
+.container {
+  /* set values the thickness of the margin area (top, right, bottom, left).  */
+  /* If left is omitted, it is the same as right. If bottom is omitted it is the same as top */
+  /* set the margin property to auto to horizontally center the element within its container. */
+  /* 60px is the height of top-header */
+  margin: 60px auto;
+  /* The max-width property defines the maximum width of an element */
+  /* If the content is larger than the maximum width, it will automatically change the height of the element */
+  max-width: 1200px;
+  /* The min-width property defines the minimum width of an element */
+  /* If the content is smaller than the minimum width, the minimum width will be applied */
+  min-width: 600px;
+}
+
+/** 
+* container header (background image)
+*/
+/* div > p	Selects all <p> elements where the parent is a <div> element */
+.container > header {
+  /* Specifies the height of certain boxes */
+  height: 270px;
+  /* background-image: url('URL')	The URL to the image. To specify more than one image, separate the URLs with a comma */
+  /* background-repeat: no-repeat	The background-image is not repeated. The image will only be shown once */
+  /* background-position: x% y%	The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100% */
+  background: url(../images/background.jpg) no-repeat 0% 75%;
+  /* Sets the width and height of the background image in percent of the parent element (container > header)*/
+  /* The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto" */
+  /* auto The background image is displayed in its original size */
+  background-size: 100%;
+}
+
+/**
+* container main section
+*/
+.main-section {
+  background: #d1d1d1;
+}
+
+/** 
+* login form
+*/
+#login-form {
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* Specifies the width of certain boxes */
+  width: 300px;
+  /* set values the thickness of the margin area (top, right, bottom, left) */
+  /* If left is omitted, it is the same as right. If bottom is omitted it is the same as top */
+  /* set the margin property to auto to horizontally center the element within its container */
+  margin: 0px auto;
+  /* space around an element's content, inside of any defined borders */
+  padding: 40px;
+  /* The CSS overflow property controls what happens to content that is too big to fit into an area */
+  /* The auto value is similar to scroll, but it adds scrollbars only when necessary */
+  overflow: auto;
+}
+
+#login-form label {
+  /* display: block; - Displays an element as a block element. It starts on a new line, and takes up the whole width */
+  display: block;
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 550;
+}
+
+#login-form input {
+  /* display: block; - Displays an element as a block element. It starts on a new line, and takes up the whole width */
+  display: block;
+  background: #ffffff;
+  /* setting border width, style, and color */
+  border: 1px solid #797878;
+  /* %:	Defines the width in percent of the containing block */
+  width: 100%;
+  /* space around elements, outside of any defined borders */
+  margin-bottom: 25px;
+  /* space around an element's content, inside of any defined borders */
+  /* this sets the size of the input box, with the text size unchanged */
+  padding: 8px;
+}
+
+#signup-form {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+}
+
+#login-form button {
+  background: #55ee88;
+  /* %:	Defines the width in percent of the containing block */
+  width: 100%;
+  /* The height property sets the height of an element */
+  height: 45px;
+  /* set values the thickness of the padding area (top, right, bottom, and left) */
+  /* If left is omitted, it is the same as right. If bottom is omitted it is the same as top */
+  /* this sets the size of the button, with the text size unchanged */
+  padding: 8px 20px;
+  /* setting border width, style, and color */
+  border: #55ee88;
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: center;
+  /* Color of an element's text */
+  color: #ffffff;
+  font-size: 1.1em;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 550;
+  /* The cursor property specifies the mouse cursor to be displayed when pointing over an element */
+  cursor: pointer;
+}
+
+#login-form button:hover {
+  background: #1e90ff;
+}
+
+#signup-btn {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+}
+
+#login-error {
+  /* space around an element's content, inside of any defined borders */
+  padding-top: 10px;
+  /* Color of an element's text */
+  color: #f70915;
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: center;
+}
+
+/**
+* aside
+*/
+#restaurant-nav {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+  /* The float property is used for positioning and formatting content e.g. let an image float left to the text in a container */
+  float: left;
+  /* Specifies the width of certain boxes */
+  width: 200px;
+}
+
+.nav-icon {
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* space around an element's content, inside of any defined borders */
+  padding: 20px;
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: center;
+}
+
+/**
+* main navigation menu
+*/
+.main-nav-btn {
+  /* display: block; - Displays an element as a block element. It starts on a new line, and takes up the whole width */
+  display: block;
+  /* Set the style of the top border: width, style, color */
+  border-top: 1px solid #ffffff;
+  /* space around an element's content, inside of any defined borders */
+  padding: 20px;
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 550;
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: left;
+  /* specifies the decoration added to text, this removes the underlines */
+  text-decoration: none;
+}
+
+/* The :hover selector is used to select elements when you mouse over them */
+.main-nav-btn:hover {
+  /* rgba(red, green, blue, alpha), alpha	Defines the opacity as a number between 0.0 (fully transparent) and 1.0 (fully opaque) */
+  background: rgba(105, 105, 105, 0.8);
+}
+
+.active {
+  background: #f2ebd9;
+}
+
+.main-nav-btn i {
+  /* The width property sets the width of an element */
+  width: 20px;
+}
+
+/**
+* restaurant list
+*/
+#restaurant-list {
+  /* display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+  display: none;
+  background: #f2ebd9;
+  /* The min-height property defines the minimum height of an element. If the content is smaller than the minimum height, the minimum height will be applied */
+  min-height: 250px;
+  /* space around elements, outside of any defined borders */
+  /* 180px is the width of aside "restaurant-nav" */
+  margin-left: 200px;
+  /* space around an element's content, inside of any defined borders */
+  padding: 10px;
+  /* The list-style-type specifies the type of list-item marker in a list */
+  list-style: none;
+  /* Color of an element's text */
+  color: #2e2d2d;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 400;
+}
+
+/**
+* restaurant
+*/
+.restaurant {
+  /* The flex container becomes flexible by setting the display property to flex */
+  /* The direct child elements of a flex container automatically becomes flexible (flex) items */
+  display: flex;
+  /* Aligns the flex items vertically */
+  align-items: center;
+  /* space around elements, outside of any defined borders */
+  margin: 10px;
+  /* space around an element's content, inside of any defined borders */
+  padding: 15px;
+  /* Set the style of the bottom border: width, style, color */
+  border-bottom: 1px solid #ffffff;
+  /* To create a transition effect, you must specify two things: the CSS property you want to add an effect to; the duration of the effect */
+  /* The transition effect will start when the specified CSS property changes value. */
+  /* transition-timing-function: linear - specifies a transition effect with the same speed from start to end */
+  /* The transition-delay property specifies a delay (in seconds) for the transition effect */
+  transition: background-color 100ms linear;
+}
+
+/* The :last-child selector matches every element that is the last child of its parent */
+.restaurant:last-child {
+  /* setting border width, style, and color */
+  border: none;
+}
+
+/* The :hover selector is used to select elements when you mouse over them */
+.restaurant:hover {
+  /* rgba(red, green, blue, alpha), alpha	Defines the opacity as a number between 0.0 (fully transparent) and 1.0 (fully opaque) */
+  background: rgba(255, 255, 255, 0.8);
+  /* To create a transition effect, you must specify two things: the CSS property you want to add an effect to; the duration of the effect */
+  /* The transition effect will start when the specified CSS property changes value */
+  /* transition-timing-function: linear - specifies a transition effect with the same speed from start to end */
+  /* The transition-delay property specifies a delay (in seconds) for the transition effect */
+  transition: background-color 100ms linear;
+}
+
+.restaurant img {
+  /* The height property sets the height of an element */
+  height: 80px;
+  /* The width property sets the width of an element */
+  width: 80px;
+  /* setting border width, style, and color */
+  border: 1px solid #ffffff;
+}
+
+/* div > p	Selects all <p> elements where the parent is a <div> element */
+/* The :first-of-type selector matches every element that is the first child, of a particular type, of its parent */
+.restaurant > div:first-of-type {
+  /* specifies how much the item will grow relative to the rest of the flexible items inside the same container */
+  /* default is 0, not growable, so other flex items in the same container are with minimum size */
+  flex: 1;
+  /* space around elements, outside of any defined borders */
+  margin-left: 10px;
+  /* space around elements, outside of any defined borders */
+  margin-right: 10px;
+}
+
+.restaurant-name {
+  /* Color of an element's text */
+  color: #027efa;
+  /* sets how thick or thin characters in text should be displayed */
+  font-weight: 550;
+  /* specifies the decoration added to text, this removes the underlines */
+  text-decoration: none;
+}
+
+/* The :hover selector is used to select elements when you mouse over them */
+.restaurant-name:hover {
+  /* specifies the decoration added to text */
+  text-decoration: underline;
+}
+
+.restaurant-address {
+  /* set values the thickness of the padding area */
+  padding-right: 20px;
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: right;
+  /* The line-height property specifies the height of a line */
+  line-height: 20px;
+}
+
+.stars {
+  /* The flex container becomes flexible by setting the display property to flex */
+  /* The direct child elements of a flex container automatically becomes flexible (flex) items */
+  display: flex;
+  /* Aligns the flex items vertically */
+  align-items: center;
+  /* set values the thickness of the padding area */
+  padding-top: 5px;
+}
+
+.stars i {
+  /* Color of an element's text */
+  color: #f13f3f;
+}
+
+.price {
+  padding-top: 5px;
+}
+
+.fav-link {
+  /* The width property sets the width of an element */
+  width: 100px;
+  /* Set the style of the left border: width, style, color */
+  border-left: 1px solid #ffffff;
+  /* The line-height property specifies the height of a line */
+  line-height: 80px;
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: center;
+  /* The cursor property specifies the mouse cursor to be displayed when pointing over an element */
+  cursor: pointer;
+}
+
+/* The :hover selector is used to select elements when you mouse over them */
+.fav-link:hover {
+  /* Color of an element's text */
+  color: #f13f3f;
+}
+
+/**
+* footer
+*/
+footer {
+  /* An element with position: relative; is positioned relative to its normal position */
+  /* Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position */
+  position: relative;
+  background: #434343;
+  /* The height property sets the height of an element */
+  height: 250px;
+  /* Color of an element's text */
+  color: #ffffff;
+  /* em:	Relative to the font-size of the element (2em means 2 times the size of the current font)	*/
+  font-size: 0.9em;
+}
+
+footer p {
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: center;
+}
+
+footer a {
+  /* Color of an element's text */
+  color: #ffffff;
+}
+
+footer ul {
+  background: #535353;
+  /* space around an element's content, inside of any defined borders */
+  padding: 20px 30%;
+  /* The flex container becomes flexible by setting the display property to flex */
+  /* The direct child elements of a flex container automatically becomes flexible (flex) items */
+  display: flex;
+  /* Aligns the flex items vertically */
+  align-items: center;
+}
+
+footer ul li {
+  /* specifies how much the item will grow relative to the rest of the flexible items inside the same container */
+  flex: 1;
+  /* The text-align property specifies the horizontal alignment of text in an element */
+  text-align: center;
+}
+
+.about {
+  /* space around elements, outside of any defined borders */
+  margin-top: 50px;
+}
+
+.copyright {
+  /* space around elements, outside of any defined borders */
+  margin-top: 10px;
+}
+
+.terms {
+  /* The flex container becomes flexible by setting the display property to flex */
+  /* The direct child elements of a flex container automatically becomes flexible (flex) items */
+  display: flex;
+  /* Aligns the flex items vertically */
+  align-items: center;
+  /* The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally) */
+  /* flex-end:	Items are positioned at the end of the container */
+  justify-content: center;
+}
+
+.terms * {
+  /* set values the thickness of the margin area (top, right, bottom, left).  */
+  /* If left is omitted, it is the same as right. If bottom is omitted it is the same as top */
+  margin: 0px 5px;
+}
+
+.terms p {
+  /* set values the thickness of the padding area */
+  padding-right: 8px;
+  /* Set the style of the right border: width, style, color */
+  border-right: 1px solid #ffffff;
+}
