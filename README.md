@@ -14,6 +14,10 @@ This is a dynamic web application for restaurant search and recommendation based
 
 Download Apache Tomcat 9.0 from the [Tomcat Website](https://tomcat.apache.org/download-90.cgi) 
 
+## Website Link
+
+https://www.restaurantshu.ml (server on Amazon EC2)
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
